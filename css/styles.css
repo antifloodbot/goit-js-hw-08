@@ -25,57 +25,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     overflow: hidden;
 }
 
-/* контейнер з потрібними відступами */
+/* Контейнер */
 main {
-    width: calc(100vw - var(--side) * 2);
-    height: calc(100vh - 48px);
-    padding: 24px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* грід усередині */
-.gallery {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
     width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-items: center;
+    height: 100vh;
+    padding: 24px 156px;
 }
 
-@media (max-width: 1023px) {
-    main {
-        width: calc(100vw - 80px);
-    }
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    grid-auto-rows: 200px;
+    gap: var(--gap);
+    justify-content: center;
+    align-content: center;
+}
 
+@media (max-width: 1200px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 360px);
     }
 }
 
-@media (max-width: 699px) {
-    main {
-        width: calc(100vw - 48px);
-    }
-
+@media (max-width: 780px) {
     .gallery {
         grid-template-columns: 1fr;
     }
 }
 
+/* Картки */
 .gallery-item {
-    width: 100%;
-    height: 100%;
+    width: 360px;
+    height: 200px;
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -85,10 +73,10 @@ main {
 
 .gallery-link {
     display: block;
-    text-decoration: none;
-    color: inherit;
     width: 100%;
     height: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
 .gallery-image {
@@ -104,7 +92,7 @@ main {
     filter: brightness(1.05);
 }
 
-/* lightbox */
+/* Модалка */
 .basicLightbox {
     position: fixed !important;
     inset: 0 !important;
@@ -114,6 +102,7 @@ main {
     background: rgba(255, 255, 255, 0.88) !important;
     -webkit-backdrop-filter: blur(8px) saturate(110%);
     backdrop-filter: blur(8px) saturate(110%);
+    z-index: 999;
 }
 
 .lb {
@@ -136,7 +125,7 @@ main {
 .lb-close,
 .lb-nav,
 .lb-counter {
-    z-index: 2;
+    z-index: 1000;
 }
 
 .lb-close {
@@ -198,24 +187,6 @@ main {
 
 .lb-next {
     right: 16px;
-}
-
-@media (max-width: 480px) {
-    .lb {
-        width: 96vw;
-        height: 90vh;
-    }
-
-    .lb-nav {
-        font-size: 24px;
-        width: 40px;
-        height: 52px;
-    }
-
-    .lb-close {
-        font-size: 18px;
-        padding: 7px 9px;
-    }
 }
 
 .lb-inner {
