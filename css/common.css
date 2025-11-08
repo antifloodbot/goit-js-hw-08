@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: transparent;
+  color: #212121;
+  line-height: 1.5;
+}
+
+#categories {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 440px;
+  padding: 24px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+#categories>.item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 392px;
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(246, 246, 254, 1);
+}
+
+#categories>.item>h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 1px;
+  color: rgba(46, 47, 66, 1);
+  margin: 0;
+}
+
+#categories .item>ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 360px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#categories .item>ul>li {
+  display: flex;
+  align-items: center;
+  width: 360px;
+  height: 40px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  color: rgba(46, 47, 66, 1);
+  padding-left: 16px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px 24px;
+  list-style: none;
+  margin: 0 auto;
+  width: 1440px;
+  padding: 100px 156px;
+  background: #fff;
+}
+
+.gallery__item {
+  flex: 0 0 360px;
+  height: 300px;
+}
+
+.gallery__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 408px;
+  padding: 24px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+#name-input {
+  width: 360px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 4px;
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .64px;
+  color: rgba(46, 47, 66, 1);
+}
+
+.text-field h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 1px;
+  color: rgba(46, 47, 66, 1);
+  margin: 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 408px;
+  padding: 24px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.login-form>label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 360px;
+  color: rgba(46, 47, 66, 1);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .64px;
+  margin: 0;
+}
+
+.login-form input {
+  width: 360px;
+  height: 40px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 4px;
+  padding: 8px 16px;
+  outline: none;
+  font: inherit;
+  color: rgba(46, 47, 66, 1);
+  background: #fff;
+}
+
+.login-form button[type="submit"] {
+  align-self: flex-start;
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(78, 117, 255, 1);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  cursor: pointer;
+}
+
+.login-form button[type="submit"]:hover {
+  background: rgba(108, 140, 255, 1);
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  gap: 16px;
+  width: 345px;
+  height: 280px;
+}
+
+.widget p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 1);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.widget .color {
+  font-weight: 500;
+}
+
+.change-color {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(78, 117, 255, 1);
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  padding: 8px 16px;
+  gap: 10px;
+
+  transition: background 0.3s ease;
+}
+
+.change-color:hover {
+  background: rgba(108, 140, 255, 1);
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 8px;
+  background: rgba(246, 246, 254, 1);
+  width: fit-content;
+}
+
+#controls input[type="number"] {
+  width: 150px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 8px;
+  background: transparent;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .64px;
+  color: rgba(46, 47, 66, 1);
+  outline: none;
+}
+
+#controls [data-create],
+#controls [data-destroy] {
+  width: 120px;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .64px;
+  cursor: pointer;
+  color: #fff;
+  transition: background .2s ease-in-out;
+}
+
+#controls [data-create] {
+  background: rgba(78, 117, 255, 1);
+}
+
+#controls [data-create]:hover {
+  background: rgba(108, 140, 255, 1);
+}
+
+#controls [data-destroy] {
+  background: rgba(255, 78, 78, 1);
+}
+
+#controls [data-destroy]:hover {
+  background: rgba(255, 112, 112, 1);
+}
+
+#boxes:empty {
+  display: none;
+}
+
+#boxes:not(:empty) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 44px;
+  padding: 32px 28px;
+  border-radius: 8px;
+  background: rgba(246, 246, 254, 1);
+  margin-top: 16px;
+}
+
+#boxes>div {
+  border-radius: 8px;
+}
